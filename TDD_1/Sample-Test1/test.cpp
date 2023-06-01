@@ -36,4 +36,12 @@ TEST_F(AccountFixture, withdeposit_1)
 	EXPECT_EQ(10000, account.getBalance());
 }
 
+TEST_F(AccountFixture, compound_interest)
+{
+	account.compound_interest();
+	EXPECT_EQ(10500, account.getBalance());
+
+	account.compound_interest();
+	EXPECT_EQ(11025, account.getBalance());
+}
 

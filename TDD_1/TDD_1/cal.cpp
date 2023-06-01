@@ -22,6 +22,11 @@ public:
 		balance += money;
 	}
 
+	void compound_interest()
+	{
+		balance *= 1.05;
+	}
+
 private:
 	int balance;
 };
